@@ -46,6 +46,14 @@ function exportConfig {
      echo "config exported"
 } 
 
+function exportGrub {
+## run grub backup
+    cp /etc/default/grub  ~/Documents/github/scripting
+    cp /etc/grub.d/30_os-prober ~/Documents/github/scripting
+     echo "GRUB exported"
+} 
+
+
 
 function exportNPM {
 ## run config backup
@@ -64,5 +72,6 @@ copyFishVar
 exportPacmanPackages
 exportAurPackages
 exportConfig
+exportGrub
 
 

@@ -76,6 +76,7 @@ gawk
 gcc
 gcc-libs
 gettext
+github-cli-git
 glibc
 gnome-calculator
 gnome-icon-theme
@@ -317,6 +318,7 @@ udisks2
 ulauncher
 ulauncher-theme-arc-dark-git
 unarchiver
+unzip
 usb_modeswitch
 usbutils
 util-linux

@@ -3,8 +3,14 @@
 
 function installPacmanPackages {           
 ##install pacman packages 
-pacman -S --needed - < packagesPacman.txt
+yes | sudo pacman -Syyuu && sudo pacman -S --needed - < $PWD/packagesPacman.txt
      echo " installed Pacman yayeeeeeeeeet"
+}
+
+function installNpm {           
+##install npm 
+     yes | sudo pacman -S npm 
+     echo " installed npm yayeeeeeeeeet"
 }
 
 function yay {
@@ -23,7 +29,7 @@ function installNpmPackages {
 
 function installAurPackages {           
 ## install AUR packages 
-yay -S $cat - < packagesAUR.txt --answeredit All --save
+yay -S $cat - < $PWD/packagesAUR.txt --answeredit All --save
      echo " installed AUR yayeeeeeeeeet"
 } 
 
@@ -36,18 +42,27 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 function fishPlugins {           
 ## fish plugins 
-fisher update  $cat < fish_plugins
+fisher update  $cat < $PWD/fish_plugins
      echo "yayeted fisher install plugins overtrøtt yayeeeeeeeeet"
 } 
 
+function importGrub {
+## run grub backup
+yes | sudo pacman -S grub 
+sudo mv -f $PWD/grub /etc/default/grub && mv -f $PWD/30_os-prober /etc/grub.d/30_os-prober
+sudo update-grub
+     echo "config imported"
+} 
 
 
 installPacmanPackages
 installAurPackages
+installNpm
 installNpmPackages
 yay
 fisher
 fishPlugins
+importGrub
 
 
 

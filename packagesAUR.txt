@@ -1,6 +1,7 @@
 discord-canary
 discord_arch_electron
 flameshot-git
+github-cli-git
 google-chrome
 jetbrains-toolbox
 linuxed-git
