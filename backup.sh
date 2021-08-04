@@ -18,6 +18,13 @@ function copyFishPlugins {
             echo "fish plugins copied"
 } 
 
+function copyFishVar {
+    #copy fish plugins
+    cp -r ~/.config/fish/fish_variables /home/daniel/Documents/github/scripting
+     cp -r ~/.config/fish/config.fish /home/daniel/Documents/github/scripting
+    echo "fish variables copied"
+} 
+
 
 function exportAurPackages {
 #   #get AUR packages 
@@ -40,11 +47,20 @@ function exportConfig {
 } 
 
 
+function exportNPM {
+## run config backup
+    npm list --global --parseable --depth=0 | sed '1d' | awk '{gsub(/\/.*\//,"",$1); print}' > npmfile.txt 
+     echo "nom global packages exported"
+} 
+
+
+
 
 
 copyBash
 copyFishFunctions
 copyFishPlugins
+copyFishVar
 exportPacmanPackages
 exportAurPackages
 exportConfig

@@ -9,17 +9,23 @@ pacman -S --needed - < packagesPacman.txt
 
 function yay {
 ##install yay
-            yes | sudo pacman -S yay
-
+      yes | sudo pacman -S yay
             echo "YAY yayeeeeeeeeet"
 } 
+
+
+function installNpmPackages { 
+##install npm packages
+     xargs npm install --global < npmfile.txt
+            echo "Npm packages yayeeeeeeeeeted"
+} 
+
 
 function installAurPackages {           
 ## install AUR packages 
 yay -S $cat - < packagesAUR.txt --answeredit All --save
      echo " installed AUR yayeeeeeeeeet"
 } 
-
 
 
 function fisher {           
@@ -30,7 +36,7 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 function fishPlugins {           
 ## fish plugins 
-fisher update  $cat < ./fish_plugins
+fisher update  $cat < fish_plugins
      echo "yayeted fisher install plugins overtrøtt yayeeeeeeeeet"
 } 
 
@@ -38,6 +44,7 @@ fisher update  $cat < ./fish_plugins
 
 installPacmanPackages
 installAurPackages
+installNpmPackages
 yay
 fisher
 fishPlugins

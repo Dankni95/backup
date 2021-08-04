@@ -1,0 +1,10 @@
+bitcoin-chart-cli
+gatsby-cli
+generator-code
+node-gyp
+nopt
+npm-check-updates
+npm
+root
+semver
+yo
