@@ -28,13 +28,13 @@ function copyFishVar {
 
 function exportAurPackages {
 #   #get AUR packages 
-    sudo  pacman -Qqme > packagesAUR.txt
+     pacman -Qqme > packagesAUR.txt
      echo "pacman packages exported"
 } 
 
 function exportPacmanPackages {
 #   #get AUR packages 
-    sudo pacman -Qqe > packagesPacman.txt
+    pacman -Qqe > packagesPacman.txt
      echo "pacman packages exported"
 } 
 
@@ -61,6 +61,11 @@ function exportNPM {
      echo "nom global packages exported"
 } 
 
+function finish {
+## run config backup
+     notify-send "The backup just ran successfully"
+} 
+
 
 
 
@@ -73,5 +78,6 @@ exportPacmanPackages
 exportAurPackages
 exportConfig
 exportGrub
+finish
 
 

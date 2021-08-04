@@ -51,7 +51,7 @@ function importGrub {
 yes | sudo pacman -S grub 
 sudo mv -f $PWD/grub /etc/default/grub && mv -f $PWD/30_os-prober /etc/grub.d/30_os-prober
 sudo update-grub
-     echo "config imported"
+     echo "grub imported"
 } 
 
 

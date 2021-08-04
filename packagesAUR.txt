@@ -4,6 +4,7 @@ flameshot-git
 github-cli-git
 google-chrome
 jetbrains-toolbox
+kvantum-theme-sweet-git
 linuxed-git
 mcmojave-circle-icon-theme-git
 nodejs-generator-code

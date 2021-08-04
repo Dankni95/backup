@@ -116,3 +116,7 @@ source /usr/share/fzf/completion.bash && source /usr/share/fzf/key-bindings.bash
 export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 # Load bash-config
 . ${HOME}/.bash-config/bash-config.conf
+
+
+
+#DOES this save on logout?

@@ -57,6 +57,7 @@ ecryptfs-utils
 efibootmgr
 emovix
 enca
+entr
 exfat-utils
 f2fs-tools
 fakeroot
@@ -141,6 +142,7 @@ kscreenlocker
 ksshaskpass
 ksysguard
 ksystemlog
+kvantum-theme-sweet-git
 kwallet-pam
 kwalletmanager
 kwayland-integration
@@ -338,6 +340,7 @@ wallpapers-juhraya
 wget
 which
 wpa_supplicant
+x11-ssh-askpass
 xdg-desktop-portal
 xdg-desktop-portal-kde
 xdg-user-dirs
