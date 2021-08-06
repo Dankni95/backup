@@ -113,9 +113,13 @@ export PATH=$PATH:/home/daniel/.local/share/applications/idea.desktop
 alias idea="/home/daniel/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/203.8084.17/bin/idea.sh &"
 source /usr/share/fzf/completion.bash && source /usr/share/fzf/key-bindings.bash
 
+
+set $_Z_DATA = "~/.local/share/z/data"
 export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 # Load bash-config
 . ${HOME}/.bash-config/bash-config.conf
+source /home/daniel/ezkl/ezkl.bash.sh
+. /home/daniel/ezkl/ezkl.bash.sh
 
 
 

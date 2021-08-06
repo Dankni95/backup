@@ -4,11 +4,13 @@ adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 adobe-source-sans-fonts
+akava-colors-git
 alsa-firmware
 alsa-utils
 amd-ucode
 android-tools
 android-udev
+ant-dracula-kde-theme-git
 apparmor
 appimagelauncher
 ark
@@ -30,6 +32,7 @@ bzip2
 cantata
 cdparanoia
 cdrdao
+cherry-kde-theme
 coreutils
 cpupower
 crda
@@ -61,6 +64,7 @@ entr
 exfat-utils
 f2fs-tools
 fakeroot
+fd
 ffmpeg
 ffmpegthumbs
 file
@@ -68,6 +72,7 @@ filelight
 filesystem
 findutils
 firefox
+firefox-nightly
 fish
 flameshot-git
 flex
@@ -142,12 +147,12 @@ kscreenlocker
 ksshaskpass
 ksysguard
 ksystemlog
-kvantum-theme-sweet-git
 kwallet-pam
 kwalletmanager
 kwayland-integration
 kwin
 kwrited
+lastpass-cli
 less
 lib32-libcanberra
 lib32-libva-intel-driver
@@ -198,6 +203,7 @@ manjaro-zsh-config
 mcmojave-circle-icon-theme-git
 mdadm
 memtest86+
+memtest86-efi
 mesa-demos
 mesa-vdpau
 mhwd

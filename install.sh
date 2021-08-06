@@ -1,8 +1,16 @@
 #!/bin/bash
-
+function moveFiles {
+## run grub backup
+if [ $PWD != "/home/daniel/Documents/github/backup" ]; then
+    mkdir -p  ~/Documents/github/backup  && mv $PWD/ ~/Documents/github/backup && echo "Github folder created"
+else
+    echo "Already in projects folder"
+fi
+} 
 
 function installPacmanPackages {           
-##install pacman packages 
+##install pacman packages & update mirrorlist
+yes | sudo pacman-mirrors --fasttrack && sudo pacman -Syyu
 yes | sudo pacman -Syyuu && sudo pacman -S --needed - < $PWD/packagesPacman.txt
      echo " installed Pacman yayeeeeeeeeet"
 }
@@ -47,14 +55,30 @@ fisher update  $cat < $PWD/fish_plugins
 } 
 
 function importGrub {
-## run grub backup
+## import grub backup
 yes | sudo pacman -S grub 
-sudo mv -f $PWD/grub /etc/default/grub && mv -f $PWD/30_os-prober /etc/grub.d/30_os-prober
+sudo mv -f $PWD/grub /etc/default/ && sudo mv -f $PWD/30_os-prober /etc/grub.d/
 sudo update-grub
      echo "grub imported"
 } 
 
+function importBashrc {
+## import bashrc
+mv -f $PWD/.bashrc ~/
 
+     echo "bashrc imported"
+} 
+
+
+function installUlancher {
+## import bashrc
+ git clone https://aur.archlinux.org/ulauncher.git && cd ulauncher && makepkg -is 
+     echo "ulancher installed"
+}
+
+
+moveFiles
+importBashrc
 installPacmanPackages
 installAurPackages
 installNpm
@@ -63,6 +87,7 @@ yay
 fisher
 fishPlugins
 importGrub
+installUlancher
 
 
 
