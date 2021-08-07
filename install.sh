@@ -25,30 +25,34 @@ function installKonf {
 
 function installNpm {           
 ##install npm 
-     yes | sudo pacman -S npm 
+     yes | sudo pacman -S --needed npm 
      echo " installed npm yayeeeeeeeeet"
 }
 
 function yay {
 ##install yay
-      yes | sudo pacman -S yay
+      yes | sudo pacman -S --needed yay
             echo "YAY yayeeeeeeeeet"
 } 
 
 
 function installNpmPackages { 
 ##install npm packages
-     xargs npm install --global < npmfile.txt
+     xargs sudo npm install --global < npmfile.txt
             echo "Npm packages yayeeeeeeeeeted"
 } 
 
 
 function installAurPackages {           
 ## install AUR packages 
-yay -S $cat - < packagesAUR.txt --answeredit None --save
-     echo " installed AUR yayeeeeeeeeet"
+yay -S - < packagesAUR.txt
+     echo " installed AURs"
 } 
 
+function fish {           
+## install fish and call
+      yay -S fish && fish    
+} 
 
 function fisher {           
 ## installing fisher
@@ -70,7 +74,7 @@ sudo update-grub
      echo "grub imported"
 } 
 
-function moveUlancher {
+function moveUlauncher {
 ## import ulancher config
  mv -f /ulauncher-config/ulancher/* /home/daniel/.config/ulauncher/
      echo "ulancher config imported"
@@ -83,8 +87,15 @@ mv -f .bashrc ~/
      echo "bashrc imported"
 } 
 
+function fish {
+yay -S fish
 
-function installUlancher {
+     echo "bashrc imported"
+} 
+
+
+
+function installUlauncher {
 ## import bashrc
 cd ~/ && git clone https://aur.archlinux.org/ulauncher.git && cd ulauncher && makepkg -is && cd ~/Documents/github/backup 
      echo "ulancher installed"
@@ -94,16 +105,17 @@ cd ~/ && git clone https://aur.archlinux.org/ulauncher.git && cd ulauncher && ma
 moveFiles
 importBashrc
 installPacmanPackages
+yay
 installAurPackages
 installNpm
 installNpmPackages
-yay
+fish
 fisher
 fishPlugins
 importGrub
 installKonf
-installUlancher
-moveUlancher
+installUlauncher
+moveUlauncher
 
 
 
