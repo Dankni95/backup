@@ -345,6 +345,7 @@ wallpapers-2018
 wallpapers-juhraya
 wget
 which
+wmctrl
 wpa_supplicant
 x11-ssh-askpass
 xdg-desktop-portal

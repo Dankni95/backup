@@ -45,7 +45,7 @@ function installNpmPackages {
 
 function installAurPackages {           
 ## install AUR packages 
-yay -S - < packagesAUR.txt
+yay -a - < packagesAUR.txt
      echo " installed AURs"
 } 
 
@@ -69,20 +69,20 @@ fisher install  $cat < fish_plugins
 function importGrub {
 ## import grub backup
 yes | sudo pacman -S grub 
-sudo mv -f grub /etc/default/ && sudo mv -f 30_os-prober /etc/grub.d/
+sudo mv -fv grub /etc/default/ && sudo mv -f 30_os-prober /etc/grub.d/
 sudo update-grub
      echo "grub imported"
 } 
 
 function moveUlauncher {
 ## import ulancher config
- mv -f /ulauncher-config/ulancher/* /home/daniel/.config/ulauncher/
+ mv -fv /ulauncher-config/ulancher/* /home/daniel/.config/ulauncher/
      echo "ulancher config imported"
 }
 
 function importBashrc {
 ## import bashrc
-mv -f .bashrc ~/
+mv -fv .bashrc ~/
 
      echo "bashrc imported"
 } 
@@ -93,6 +93,10 @@ yay -S fish
      echo "bashrc imported"
 } 
 
+function ulauncherPlugins {
+## import ulauncher plugins
+mv -fv ~/Documents/github/backup/extensions/ ~/.local/share/ulauncher/
+} 
 
 
 function installUlauncher {
@@ -100,6 +104,26 @@ function installUlauncher {
 cd ~/ && git clone https://aur.archlinux.org/ulauncher.git && cd ulauncher && makepkg -is && cd ~/Documents/github/backup 
      echo "ulancher installed"
 }
+
+function moveFishFunctions {
+        ## copy functions/aliases
+    mv -fv ~/Documents/github/backup/functions/* ~/.config/fish/functions/
+            echo "fish function imported"
+}  
+
+function moveFishPlugins {
+    #copy fish plugins
+    mv -fv ~/Documents/github/backup/fish_plugins ~/.config/fish/
+   
+            echo "fish plugins imported"
+} 
+
+function moveFishVar {
+    #copy fish plugins
+    mv -fv ~/Documents/github/backup/fish_variables ~/.config/fish/
+     mv -fv ~/Documents/github/backup/config.fish ~/.config/fish/
+    echo "fish variables imported"
+} 
 
 
 moveFiles
@@ -112,10 +136,14 @@ installNpmPackages
 fish
 fisher
 fishPlugins
+moveFishPlugins
+moveFishVar
+moveFishFunctions
 importGrub
 installKonf
 installUlauncher
 moveUlauncher
+ulauncherPlugins
 
 
 

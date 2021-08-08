@@ -21,4 +21,3 @@ volantes-cursors
 yakuake-skin-breeze-perfect-dark
 youtube-music-bin
 zoom
-fish

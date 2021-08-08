@@ -41,6 +41,7 @@ function exportPacmanPackages {
 
 function exportConfig {
 ## run config backup
+ rm -rf ~/daniel.konfsave.zip
     konfsave s
     konfsave a
     cp -r ~/daniel.konfsave.zip ~/Documents/github/backup
@@ -74,6 +75,11 @@ function finish {
      notify-send "The backup just ran successfully"
 } 
 
+function ulauncherPlugins {
+## copy ulauncher plugins
+cp -r ~/.local/share/ulauncher/extensions/ ~/Documents/github/backup/ 
+} 
+
 
 
 
@@ -87,6 +93,7 @@ exportAurPackages
 exportConfig
 exportGrub
 exportUlancher
+ulauncherPlugins
 finish
 
 
