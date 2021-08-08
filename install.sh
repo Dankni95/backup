@@ -86,8 +86,8 @@ sudo update-grub
 
 function moveUlauncher {
 ## import ulancher config
-cd ~/.config/ulauncher/
-rm -rf *
+cd ~/.config/
+rm -rf ulauncher/
 mv -fv ~/Documents/github/backup/ulauncher-config/ulauncher/* ~/.config/ulauncher/
      echo "ulancher config imported"
 }
