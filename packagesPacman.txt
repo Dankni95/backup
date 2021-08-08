@@ -42,7 +42,6 @@ device-mapper
 dhclient
 dhcpcd
 diffutils
-discord-canary
 discord_arch_electron
 discover
 dkms
@@ -72,7 +71,6 @@ filelight
 filesystem
 findutils
 firefox
-firefox-nightly
 fish
 flameshot-git
 flex

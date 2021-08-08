@@ -14,7 +14,7 @@ function installPacmanPackages {
 yes | sudo pacman-mirrors --fasttrack && sudo pacman -Syyu
 yes | sudo pacman -Syyuu && sudo pacman -S --needed - < packagesPacman.txt
 yes | sudo pacman -S --needed base-devel
-     echo " installed Pacman yayeeeeeeeeet"
+     echo " installed Pacman "
 }
 
 function installKonf {           
@@ -23,23 +23,31 @@ function installKonf {
      echo " installed konf"
 }
 
+function importKonf {           
+## installing fisher
+yes | konfsave u daniel.konfsave.zip
+yes | konfsave l daniel
+            echo "fisher installed"
+} 
+
+
 function installNpm {           
 ##install npm 
      yes | sudo pacman -S --needed npm 
-     echo " installed npm yayeeeeeeeeet"
+     echo " installed npm "
 }
 
 function yay {
 ##install yay
       yes | sudo pacman -S --needed yay
-            echo "YAY yayeeeeeeeeet"
+            echo "YAY "
 } 
 
 
 function installNpmPackages { 
 ##install npm packages
      xargs sudo npm install --global < npmfile.txt
-            echo "Npm packages yayeeeeeeeeeted"
+            echo "Npm packages "
 } 
 
 
@@ -54,16 +62,17 @@ function fish {
       yay -S fish && fish    
 } 
 
+
 function fisher {           
 ## installing fisher
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-            echo "fisher yayeeeeeeeeet"
+            echo "fisher installed"
 } 
 
 function fishPlugins {           
 ## fish plugins 
 fisher install  $cat < fish_plugins
-     echo "yayeted fisher install plugins overtrøtt yayeeeeeeeeet"
+     echo "yayeted fisher install plugins o"
 } 
 
 function importGrub {
@@ -76,7 +85,7 @@ sudo update-grub
 
 function moveUlauncher {
 ## import ulancher config
- mv -fv /ulauncher-config/ulancher/* /home/daniel/.config/ulauncher/
+ mv -fv /ulauncher-config/ulauncher/* /home/daniel/.config/ulauncher/
      echo "ulancher config imported"
 }
 
@@ -87,11 +96,6 @@ mv -fv .bashrc ~/
      echo "bashrc imported"
 } 
 
-function fish {
-yay -S fish
-
-     echo "bashrc imported"
-} 
 
 function ulauncherPlugins {
 ## import ulauncher plugins

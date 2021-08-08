@@ -20,7 +20,7 @@ SETUVAR _fisher_jethrokuan_2F_fzf_files:/home/daniel/\x2econfig/fish/functions/_
 SETUVAR _fisher_jethrokuan_2F_z_files:/home/daniel/\x2econfig/fish/functions/__z\x2efish\x1e/home/daniel/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/daniel/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/daniel/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/daniel/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fish_2D_bax_files:/home/daniel/\x2econfig/fish/functions/replay\x2efish\x1e/home/daniel/\x2econfig/fish/completions/replay\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/daniel/\x2econfig/fish/functions/fisher\x2efish\x1e/home/daniel/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jethrokuan/fzf\x1ejorgebucaran/fish\x2dbax\x1ejethrokuan/z\x1etakashabe/fish\x2dpeco\x1efranciscolourenco/done\x1ejorgebucaran/fisher
+SETUVAR _fisher_plugins:jethrokuan/z\x1ejethrokuan/fzf\x1ejorgebucaran/fish\x2dbax\x1etakashabe/fish\x2dpeco\x1efranciscolourenco/done\x1ejorgebucaran/fisher
 SETUVAR fish_color_autosuggestion:707A8C
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:5CCFE6

@@ -1,9 +1,7 @@
 akava-colors-git
 ant-dracula-kde-theme-git
 cherry-kde-theme
-discord-canary
 discord_arch_electron
-firefox-nightly
 flameshot-git
 github-cli-git
 google-chrome
