@@ -86,7 +86,9 @@ sudo update-grub
 
 function moveUlauncher {
 ## import ulancher config
- mv -fv /ulauncher-config/ulauncher/* /home/daniel/.config/ulauncher/
+cd ~/.config/ulauncher/
+rm -rf *
+mv -fv ~/Documents/github/backup/ulauncher-config/ulauncher/* ~/.config/ulauncher/
      echo "ulancher config imported"
 }
 
@@ -107,7 +109,7 @@ mv -fv ~/Documents/github/backup/extensions/ ~/.local/share/ulauncher/
 function installUlauncher {
 ## import bashrc
 cd ~/ && git clone https://aur.archlinux.org/ulauncher.git && cd ulauncher && makepkg -is && cd ~/Documents/github/backup 
-     echo "ulancher installed"
+     echo "ulauncher installed"
 }
 
 function moveFishFunctions {
@@ -147,8 +149,9 @@ moveFishFunctions
 importGrub
 installKonf
 installUlauncher
-moveUlauncher
 ulauncherPlugins
+moveUlauncher
+
 
 
 

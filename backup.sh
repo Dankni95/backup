@@ -58,7 +58,7 @@ function exportGrub {
 function exportUlancher {
 ## run grub backup
     mkdir -p ulauncher-config
-    cp -r ~/.config/ulauncher  ~/Documents/github/backup/ulauncher-config/
+    sudo cp -r ~/.config/ulauncher  ~/Documents/github/backup/ulauncher-config/
      echo "Ulancher exported"
 } 
 
