@@ -37,10 +37,10 @@ function installNpm {
      echo " installed npm "
 }
 
-function yay {
+function installYay {
 ##install yay
       yes | sudo pacman -S --needed yay
-            echo "YAY "
+            echo "YAY"
 } 
 
 
@@ -59,7 +59,8 @@ yay -a - < packagesAUR.txt
 
 function fish {           
 ## install fish and call
-      yay -S fish && fish    
+      yay -S fish 
+      yay -a fish   
 } 
 
 
@@ -133,7 +134,7 @@ function moveFishVar {
 moveFiles
 importBashrc
 installPacmanPackages
-yay
+installYay
 installAurPackages
 installNpm
 installNpmPackages
