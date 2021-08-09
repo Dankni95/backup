@@ -13,7 +13,7 @@ function installPacmanPackages {
 ##install pacman packages & update mirrorlist
 yes | sudo pacman-mirrors --fasttrack && sudo pacman -Syyu
 yes | sudo pacman -Syyuu && sudo pacman -S --needed - < packagesPacman.txt
-yes | sudo pacman -S --needed base-devel
+sudo pacman -S --needed base-devel --ask 4
      echo " installed Pacman "
 }
 
@@ -53,14 +53,13 @@ function installNpmPackages {
 
 function installAurPackages {           
 ## install AUR packages 
-yay -a - < packagesAUR.txt
+yay -S - < packagesAUR.txt
      echo " installed AURs"
 } 
 
 function fish {           
 ## install fish and call
       yay -S fish 
-      yay -a fish   
 } 
 
 
@@ -86,8 +85,6 @@ sudo update-grub
 
 function moveUlauncher {
 ## import ulancher config
-cd ~/.config/
-rm -rf ulauncher/
 mv -fv ~/Documents/github/backup/ulauncher-config/ulauncher/* ~/.config/ulauncher/
      echo "ulancher config imported"
 }
@@ -109,6 +106,7 @@ mv -fv ~/Documents/github/backup/extensions/ ~/.local/share/ulauncher/
 function installUlauncher {
 ## import bashrc
 cd ~/ && git clone https://aur.archlinux.org/ulauncher.git && cd ulauncher && makepkg -is && cd ~/Documents/github/backup 
+cd ~/Documents/github/backup 
      echo "ulauncher installed"
 }
 
@@ -151,6 +149,8 @@ installKonf
 installUlauncher
 ulauncherPlugins
 moveUlauncher
+installAurPackages
+importKonf
 
 
 
